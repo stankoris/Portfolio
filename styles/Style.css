@@ -1,0 +1,428 @@
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body, html {
+    background-color: rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: url('../images/background.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+header, footer {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+header nav {
+    align-self: center;
+}
+
+header nav a {
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(226, 226, 226);
+    margin-left: 1rem;
+    font-size: larger;
+}
+
+header nav a:hover {
+    border-radius: 5px;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.7);
+}
+
+main {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    padding: 1rem;
+    margin-top: 10rem;
+    margin-bottom: 80px;
+    color: white;
+    overflow-x: hidden;
+}
+main h2 {
+    color: #7D0000;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top: 2px solid white;
+    color: white;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer i {
+    cursor: pointer;
+    border-radius: 50%;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin-right: 2rem;
+    font-size: 30px;
+    transition: background-color 1s ease, font-size 1s ease, color 1s ease, box-shadow 1s ease;
+}
+
+footer i:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-size: 36px;
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.7);
+}
+
+.name {
+    cursor:not-allowed;
+    margin-top: 1rem;
+}
+
+.name h1 {
+    color: #7D0000;
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 40px;
+}
+
+.name h4 {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    color: white;
+}
+
+/* Ispod mozes da dodajes css vezan samo za stranicu, iznad ovoga ti je sablon za izgled */
+
+
+/* ABOUT STYLE */
+.aboutMain .picture {
+    display: flex;
+    justify-content: center;
+}
+
+.aboutMain img {
+    width: 500px;
+    border-radius: 50px;
+    cursor: none;
+}
+.gif {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* PROJECTS STYLE*/
+.projectsMain {
+    display: grid;
+    grid-template-columns: 20% 80%; 
+}
+
+.projectsMain a {
+    text-decoration: none;
+    color: white;
+}
+
+.projectsMain a:hover {
+    color: blue;
+}
+
+.quizVideo video {
+    width: 800px;
+}
+
+.videoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.circle {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: border-radius 5s ease, width 5s ease;
+}
+.circle:hover {
+    width: 700px;
+    border-radius: 0;
+}
+.circle video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* WORKEXPIRIENCE STYLE */
+.workExMain a {
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.workExMain a:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.7);
+} 
+
+.workExMain li {
+    margin: 25px;
+    margin-bottom: 20px;
+}
+
+/* CONTACT STYLE */
+.contactMain div {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contactMain i {
+    cursor: help;
+    color: white;
+    font-size: 80px;
+    padding: 5%;
+    margin-top: 10%;
+}
+
+#instagram:hover {
+    background: linear-gradient(to bottom, rgb(153, 0, 255), rgb(216, 36, 96), rgb(255, 0, 157), yellow);
+    border-radius: 10px;
+}
+
+#linkedin:hover {
+    color: blue;
+    background-color:white;
+    border-radius: 10px;
+}
+
+#github:hover {
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border-radius: 46%;
+}
+
+#email:hover {
+    background: linear-gradient(to right, blue, red, yellow, green);
+    border-radius: 10px;
+}
+
+.contactInformation {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.contactInformation p {
+    font-size: 26px;
+}
+
+#contactInformationTextMobile {
+    display: none;
+}
+
+/* ISPOD POSTAVLJAM CSS ZA TELEFON */
+
+@media screen and (min-width: 1060px) {
+    #listMobile {
+        display: none;
+    }
+    
+    #listButton {
+        display: none;  
+    }
+}
+
+ @media screen  and (max-height: 760px) {
+    footer {
+        display: none;
+    }
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1060px) {
+
+    footer {
+        display: none;
+    }
+
+    .listPc {
+        display: none;
+    }
+
+    body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    main {
+        font-size: 36px;
+        z-index: 2000;
+    }
+
+    .projectsMain {
+        font-size: 24px;
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        width: 100%;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    .aboutMain img {
+        width: 300px;
+    }
+
+    #listContainer {
+        width: 100%;
+        height: 100%;
+        z-index: 2000;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    #listMobile {
+        display: flex;
+        flex-direction: column;
+        background-color: lightgray;
+        transform: translateX(-100%);
+        transition: transform 0.5s ease;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
+
+    #listMobile a {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        text-decoration: none;
+        font-size: 48px;
+        width: auto;
+        margin-left: 3rem;
+        margin-bottom: 4rem;
+        color: black;
+    }
+
+    #listButton {
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+        z-index: 3000;
+    }
+
+    #listButton i {
+        font-size: 60px;
+    }
+
+    #closeButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        position: fixed;
+        top: 2rem;
+        right: 5rem;
+        font-size: 60px;
+        width: 70px;
+        border: 3px solid black;
+        border-radius: 10px;
+        z-index: 3000;
+    }
+
+    #closeButton:active {
+        background-color: rgb(121, 121, 121);
+    }
+
+    #contactInformationText {
+        display: none;
+    }
+    
+    #contactInformationTextMobile {
+        display: block;
+    }
+}
