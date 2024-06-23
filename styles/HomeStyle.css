@@ -9,6 +9,8 @@ body, html {
     height: 100%;
     display: flex;
     flex-direction: column;
+    background: url('../images/background.png') no-repeat center center fixed;
+    background-size: cover;
 }
 
 header, footer {
@@ -102,7 +104,7 @@ footer i:hover {
 }
 
 .name h1 {
-    color: #7D0000;
+    color: #7d0000;
     margin: 0;
     margin-bottom: 10px;
     font-size: 40px;
@@ -123,10 +125,16 @@ footer i:hover {
     position: absolute;
     top: 10rem;
     left: 0;
-    width: 100%;
-    height: auto;
-    background: url('../images/HomeWallpaper.jpg') repeat;
-    animation: moveBackground 20s linear infinite;
+    width: 99%;
+    height: 72%;
+    background: url('../images/HomeWallpaper.png') repeat;
+    animation: moveBackground 40s linear infinite;
+}
+
+.background img {
+    background: url('../images/background.png') no-repeat center center fixed;
+    background-size: cover;
+    border-radius: 30px;
 }
 
 @keyframes moveBackground {
@@ -234,8 +242,8 @@ footer i:hover {
         position: absolute;
         top: 10rem;
         left: 0;
-        width: 100%;
-        height: 100%;
+        width: 99%;
+        height: 80%;
     }
 } 
 
@@ -325,8 +333,8 @@ footer i:hover {
         position: absolute;
         top: 10rem;
         left: 0;
-        width: 100%;
-        height: 100%;
+        width: 99%;
+        height: 80%;
     }
 } 
 
