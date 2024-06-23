@@ -131,11 +131,26 @@ footer i:hover {
     animation: moveBackground 40s linear infinite;
 }
 
+.background:active {
+    animation: stopBackground;
+}
+
 .background img {
     background: url('../images/background.png') no-repeat center center fixed;
     background-size: cover;
     border-radius: 30px;
 }
+
+
+@keyframes stopBackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 0; 
+    }
+}
+
 
 @keyframes moveBackground {
     from {
