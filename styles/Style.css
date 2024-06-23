@@ -218,7 +218,6 @@ footer i:hover {
 }
 
 /* SKILLS STYLE */
-
 .skillsMain {
     display: flex;
     flex-direction: row;
@@ -236,7 +235,8 @@ footer i:hover {
     padding: 0;
 }
 
-.skillsMain img {
+.iconDivContainer img {
+    padding: 1rem;
     width: 150px;
     height: 150px;
     transition: width 2s ease, height 2s ease;
@@ -254,6 +254,49 @@ footer i:hover {
     width: 10%;
     height: auto;
     margin-right: 3rem;
+}
+
+.background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    width: 99%;
+    height: 72%;
+    background: url('../images/HomeWallpaper.png') repeat;
+    animation: moveBackground 40s linear infinite;
+}
+
+.background:active {
+    animation: stopBackground 40s linear infinite;
+}
+
+.background img {
+    background: url('../images/background.png') no-repeat center center fixed;
+    background-size: cover;
+    border-radius: 30px;
+}
+
+
+@keyframes stopBackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -100% 0; 
+    }
+}
+
+
+@keyframes moveBackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 0; 
+    }
 }
 
 /* CONTACT STYLE */
@@ -467,7 +510,7 @@ footer i:hover {
         height: 100%;
     }
 
-    .skillsMain img {
+    .iconDivContainer img {
         width: 200px;
         height: 200px;
         transition: width 2s ease, height 2s ease;
@@ -479,8 +522,7 @@ footer i:hover {
         align-items: center;
         width: 30%;
         height: auto;
-        margin-right: 5rem;
-        margin-bottom: 3rem;
+        margin-right: 3dvi;
     }
 }
 
@@ -622,13 +664,14 @@ footer i:hover {
         display: block;
     }
 
-    .skillsMain img {
+    .iconDivContainer img {
+        border-radius: 0;
         width: 200px;
         height: 200px;
         justify-self: center;
     }
 
-    .skillsMain img:hover {
+    .iconDivContainer img:hover {
         width: 200px;
         height: 200px;
     }
@@ -643,8 +686,8 @@ footer i:hover {
     .iconDiv {
         width: 100%;
         height: auto;
-        margin-bottom: 1rem;
         padding: 0;
+        margin: 0;
     }
 
 } 

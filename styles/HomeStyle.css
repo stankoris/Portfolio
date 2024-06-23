@@ -127,38 +127,18 @@ footer i:hover {
     left: 0;
     width: 99%;
     height: 72%;
-    background: url('../images/HomeWallpaper.png') repeat;
-    animation: moveBackground 40s linear infinite;
 }
 
-.background:active {
-    animation: stopBackground;
+.background img {   
+    animation: dance 2s;
 }
 
-.background img {
-    background: url('../images/background.png') no-repeat center center fixed;
-    background-size: cover;
-    border-radius: 30px;
-}
-
-
-@keyframes stopBackground {
-    from {
-        background-position: 0 0;
-    }
-    to {
-        background-position: 0 0; 
-    }
-}
-
-
-@keyframes moveBackground {
-    from {
-        background-position: 0 0;
-    }
-    to {
-        background-position: 100% 0; 
-    }
+@keyframes dance {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(20deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-20deg); }
+    100% { transform: rotate(0deg); }
 }
 
 /* ISPOD POSTAVLJAM CSS ZA TABLET */
@@ -255,7 +235,7 @@ footer i:hover {
 
     .background {
         position: absolute;
-        top: 10rem;
+        top: 15rem;
         left: 0;
         width: 99%;
         height: 80%;
@@ -350,6 +330,10 @@ footer i:hover {
         left: 0;
         width: 99%;
         height: 80%;
+    }
+
+    .background img {
+        width: 450px;
     }
 } 
 
