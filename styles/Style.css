@@ -89,13 +89,9 @@ footer i {
     padding: 0;
     margin-right: 2rem;
     font-size: 30px;
-    transition: background-color 1s ease, font-size 1s ease, color 1s ease, box-shadow 1s ease;
 }
 
 footer i:hover {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    font-size: 36px;
     box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.7);
 }
 
@@ -144,6 +140,9 @@ footer i:hover {
     display: grid;
     grid-template-columns: 20% 80%; 
 }
+.projectsMain p {
+    font-size: 30px;
+}
 
 .projectsMain a {
     text-decoration: none;
@@ -160,10 +159,25 @@ footer i:hover {
 
 .videoContainer {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
+.calculatorContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+.quizContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+
 .circle {
     width: 400px;
     height: 400px;
@@ -201,6 +215,45 @@ footer i:hover {
 .workExMain li {
     margin: 25px;
     margin-bottom: 20px;
+}
+
+/* SKILLS STYLE */
+
+.skillsMain {
+    display: flex;
+    flex-direction: row;
+}
+
+.iconDivContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.skillsMain img {
+    width: 150px;
+    height: 150px;
+    transition: width 2s ease, height 2s ease;
+}
+
+.skillsMain img:hover {
+    width: 200px;
+    height: 200px;
+}
+
+.iconDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    height: auto;
+    margin-right: 3rem;
 }
 
 /* CONTACT STYLE */
@@ -253,7 +306,7 @@ footer i:hover {
     display: none;
 }
 
-/* ISPOD POSTAVLJAM CSS ZA TELEFON */
+/* ISPOD POSTAVLJAM CSS ZA TABLET/TAKO NESTO */
 
 @media screen and (min-width: 1060px) {
     #listMobile {
@@ -269,6 +322,7 @@ footer i:hover {
     footer {
         display: none;
     }
+    
 } 
 
 @media screen and (max-width: 1060px) {
@@ -289,12 +343,7 @@ footer i:hover {
     }
 
     main {
-        font-size: 36px;
         z-index: 2000;
-    }
-
-    .projectsMain {
-        font-size: 24px;
     }
 
     header {
@@ -306,10 +355,6 @@ footer i:hover {
 
     header nav {
         display: none;
-    }
-
-    .aboutMain img {
-        width: 300px;
     }
 
     #listContainer {
@@ -339,10 +384,10 @@ footer i:hover {
     #listMobile a {
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         text-decoration: none;
-        font-size: 48px;
+        font-size: 36px;
         width: auto;
         margin-left: 3rem;
-        margin-bottom: 4rem;
+        margin-bottom: 3rem;
         color: black;
     }
 
@@ -354,7 +399,7 @@ footer i:hover {
     }
 
     #listButton i {
-        font-size: 60px;
+        font-size: 40px;
     }
 
     #closeButton {
@@ -365,8 +410,8 @@ footer i:hover {
         position: fixed;
         top: 2rem;
         right: 5rem;
-        font-size: 60px;
-        width: 70px;
+        font-size: 40px;
+        width: 40px;
         border: 3px solid black;
         border-radius: 10px;
         z-index: 3000;
@@ -383,7 +428,63 @@ footer i:hover {
     #contactInformationTextMobile {
         display: block;
     }
+
+    /* ISPOD MENJAJ OVO IZNAD JE SABLON */
+
+    /* ABOUT STYLE */
+    .aboutMain img {
+        width: 300px;
+    }
+
+    /* PROJECT STYLE */
+    .projectsMain {
+        display: flex;
+        flex-direction: column;
+        font-size: 24px;
+    }
+
+    .videoContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* SKILLS STYLE */
+
+    .skillsMain {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .iconDivContainer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        height: 100%;
+    }
+
+    .skillsMain img {
+        width: 200px;
+        height: 200px;
+        transition: width 2s ease, height 2s ease;
+    }
+
+    .iconDiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30%;
+        height: auto;
+        margin-right: 5rem;
+        margin-bottom: 3rem;
+    }
 }
+
+/* ISPOD IDE STYLE ZA TELEFON */
 
 @media screen  and (max-width: 720px) {
 
@@ -470,6 +571,9 @@ footer i:hover {
         background-color: rgb(121, 121, 121);
     } 
 
+    /* ISPOD MENJAJ OVO IZNAD JE SABLON */
+
+    /* CONTACT STYLE */
     .contactMain i {
         font-size: 36px;
     }
@@ -478,12 +582,23 @@ footer i:hover {
         font-size: small;
     }
 
+    /* ABOUT STYLE */
     .aboutMain img {
         width: 300px;
     }
 
-    .projectsMain {
-        font-size: small;
+    /* WORK STYLE */
+    .workExMain a:hover {
+        color: white;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    /* PROJECT STYLE */
+    .projectsMain p {
+        display: flex;
+        flex-direction: column;
+        font-size: 12px;
     }
 
     .projectsMain video {
@@ -493,6 +608,43 @@ footer i:hover {
 
     .videoContainer h1 {
         font-size: small;
+    }
+
+    .videoContainer {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    /* SKILLS STYLE */
+
+    .skillsMain {
+        display: block;
+    }
+
+    .skillsMain img {
+        width: 200px;
+        height: 200px;
+        justify-self: center;
+    }
+
+    .skillsMain img:hover {
+        width: 200px;
+        height: 200px;
+    }
+
+
+    .iconDivContainer {
+        display: block;
+        overflow-x: hidden;
+        height: 100%
+    }
+
+    .iconDiv {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+        padding: 0;
     }
 
 } 

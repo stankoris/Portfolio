@@ -73,14 +73,27 @@ footer i {
     padding: 0;
     margin-right: 2rem;
     font-size: 30px;
-    transition: background-color 1s ease, font-size 1s ease, color 1s ease, box-shadow 1s ease;
 }
 
 footer i:hover {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    font-size: 36px;
     box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.7);
+}
+
+#instagram:hover {
+    background: linear-gradient(to bottom, rgb(153, 0, 255), rgb(216, 36, 96), rgb(255, 0, 157), yellow);
+    border-radius: 10px;
+}
+
+#linkedin:hover {
+    color: blue;
+    background-color:white;
+    border-radius: 10px;
+}
+
+#github:hover {
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border-radius: 46%;
 }
 
 .name {

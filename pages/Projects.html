@@ -20,6 +20,7 @@
             <a href="./About.html">About me</a>
             <a href="./WorkExpirience.html">Work Expirience</a>
             <a href="./Projects.html">Projects</a>
+            <a href="./Skills.html">Skills</a>
             <a href="./Contact.html">Contact</a>
         </nav>
     </header>
@@ -30,6 +31,7 @@
             <a href="./About.html">About me</a>
             <a href="./WorkExpirience.html">Work Experience</a>
             <a href="./Projects.html">Projects</a>
+            <a href="./Skills.html">Skills</a>
             <a href="./Contact.html">Contact</a>
             <div class="listIcons">
                 <a target="_blank" href="https://www.instagram.com/risimic_s/"><i class="fa-brands fa-instagram"></i></a></i>
@@ -46,34 +48,59 @@
             <p>Username: test12</p>
             <p>Password: 123</p>
         </div>
+
         <div class="videoContainer">
-            <h1>Quiz</h1>
+
+            <div class="calculatorContainer">
+                <h1>Calculator</h1>
             <div class="circle">
-                <video id="myVideo" width="400" height="400" muted>
-                    <source src="../videos/quizVideo.mp4" type="video/mp4">
+                <video id="calculatorVideo" width="400" height="400" muted>
+                    <source src="../videos/calculator.mp4" type="video/mp4">
                 </video>
             </div>
-            <a target="_blank" href="http://181g123.e2.mars-hosting.com/"><h1>Play Game</h1></a>
+            <a target="_blank" href="https://stankoris.github.io/Calculator2/"><h1>Try it</h1></a>
+            </div>
+            
+            <div class="quizContainer">
+                <h1>Quiz</h1>
+                <div class="circle">
+                    <video id="quizVideo" width="400" height="400" muted>
+                        <source src="../videos/quizVideo.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <a target="_blank" href="http://181g123.e2.mars-hosting.com/"><h1>Play Game</h1></a>
+            </div>
         </div>
     </main>
+    
     <footer>
         <div>
-            <a target="_blank" href="https://www.instagram.com/risimic_s/"><i class="fa-brands fa-instagram"></i></a></i>
-            <a target="_blank" href="https://www.linkedin.com/in/stankorisimic/"><i class="fa-brands fa-linkedin"></i></a>
-            <a target="_blank" href="https://github.com/stankoris"><i class="fa-brands fa-github"></i></a>
+            <a target="_blank" href="https://www.instagram.com/risimic_s/"><i id="instagram" class="fa-brands fa-instagram"></i></a></i>
+            <a target="_blank" href="https://www.linkedin.com/in/stankorisimic/"><i id="linkedin" class="fa-brands fa-linkedin"></i></a>
+            <a target="_blank" href="https://github.com/stankoris"><i id="github" class="fa-brands fa-github"></i></a>
         </div>
     </footer>
 
     <script src="../index.js"></script>
     <script>
-         var video = document.getElementById('myVideo');
-            video.addEventListener('mouseover', function() {
+
+        const quizVideo = document.getElementById('quizVideo');
+        const calculatorVideo = document.getElementById('calculatorVideo');
+
+
+        function playVideoOnHover(video) {
+            video.addEventListener('mouseenter', () => {
                 video.play();
             });
-            video.addEventListener('mouseout', function() {
+
+            video.addEventListener('mouseleave', () => {
                 video.pause();
                 video.currentTime = 0;
             });
+        }
+
+        playVideoOnHover(quizVideo);
+        playVideoOnHover(calculatorVideo);
     </script>
 </body>
 </html>
