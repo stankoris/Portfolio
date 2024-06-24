@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prebacivanje Tema</title>
+    <style>
+        :root {
+            --primary-color: #000;
+            --secondary-color: #007bff;
+            --tertiary-color: #333;
+            --background-color: #fff;
+            scrollbar-color: var(--primary-color) var(--secondary-color);
+            font-size: clamp(18px, 3vw, 30px);
+        }
+
+        .dark-theme {
+            --primary-color: #ffd52c;
+            --secondary-color: #ff5c00;
+            --tertiary-color: #c72d04;
+            --background-color: #111;
+            scrollbar-color: var(--primary-color) var(--secondary-color);
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--primary-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: var(--secondary-color);
+        }
+
+        p {
+            color: var(--tertiary-color);
+        }
+    </style>
+</head>
+<body>
+    <button id="theme-toggle">Toggle Theme</button>
+    <h1>Dobrodošli!</h1>
+    <p>Ovo je primer kako omogućiti prebacivanje između light i dark teme.</p>
+
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        themeToggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+        });
+    </script>
+</body>
+</html>
