@@ -563,7 +563,6 @@ footer i:hover {
     }
 
     /* SKILLS STYLE */
-
     .skillsMain {
         display: flex;
         flex-direction: row;
@@ -594,6 +593,10 @@ footer i:hover {
         width: 30%;
         height: auto;
         margin-right: 3dvi;
+    }
+
+    .background {
+        animation: moveBackground 20s linear infinite;
     }
 }
 
@@ -736,7 +739,6 @@ footer i:hover {
     }
 
     /* SKILLS STYLE */
-
     .skillsMain {
         display: block;
     }
@@ -767,4 +769,7 @@ footer i:hover {
         margin: 0;
     }
 
+    .background {
+        animation: moveBackground 10s linear infinite;
+    }
 } 
