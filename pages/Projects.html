@@ -84,13 +84,11 @@
         </div>
     </footer>
 
-    <script src="../index.js"></script>
+    <script src="../pagesJS.js"></script>
     <script>
-
         const quizVideo = document.getElementById('quizVideo');
         const calculatorVideo = document.getElementById('calculatorVideo');
-
-
+        
         function playVideoOnHover(video) {
             video.addEventListener('mouseenter', () => {
                 video.play();
@@ -101,7 +99,6 @@
                 video.currentTime = 0;
             });
         }
-
         playVideoOnHover(quizVideo);
         playVideoOnHover(calculatorVideo);
     </script>

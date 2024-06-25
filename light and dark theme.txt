@@ -1,53 +1,203 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prebacivanje Tema</title>
-    <style>
-        :root {
-            --primary-color: #000;
-            --secondary-color: #007bff;
-            --tertiary-color: #333;
-            --background-color: #fff;
-            scrollbar-color: var(--primary-color) var(--secondary-color);
-            font-size: clamp(18px, 3vw, 30px);
-        }
+// KOD ZA PROMENU TEME
 
-        .dark-theme {
-            --primary-color: #ffd52c;
-            --secondary-color: #ff5c00;
-            --tertiary-color: #c72d04;
-            --background-color: #111;
-            scrollbar-color: var(--primary-color) var(--secondary-color);
-        }
+const themeToggleBtn = document.getElementById('theme-toggle');
+const toggleCircle = themeToggleBtn.querySelector('.toggle-circle');
+const blackBanner = document.getElementById("blackBanner");
+const body = document.getElementsByClassName('body')[0];
 
-        body {
-            background-color: var(--background-color);
-            color: var(--primary-color);
-            margin: 0;
-            padding: 20px;
-        }
+// themeToggleBtn.addEventListener('click', () => {
+//     document.body.classList.toggle('light-theme');
+//     if (document.body.classList.contains('light-theme')) {
+//         toggleCircle.classList.remove('moon-icon');
+//         toggleCircle.classList.add('sun-icon');
+//         banner.style.display = "none"
+//         blackBanner.style.display = "flex"
+//     } else {
+//         toggleCircle.classList.remove('sun-icon');
+//         toggleCircle.classList.add('moon-icon');
+//         banner.style.display = "flex"
+//                 blackBanner.style.display = "none"
+//     }
+// });
 
-        h1 {
-            color: var(--secondary-color);
-        }
 
-        p {
-            color: var(--tertiary-color);
-        }
-    </style>
-</head>
-<body>
-    <button id="theme-toggle">Toggle Theme</button>
-    <h1>Dobrodošli!</h1>
-    <p>Ovo je primer kako omogućiti prebacivanje između light i dark teme.</p>
 
-    <script>
-        const themeToggleBtn = document.getElementById('theme-toggle');
-        themeToggleBtn.addEventListener('click', () => {
-            document.body.classList.toggle('dark-theme');
-        });
-    </script>
-</body>
-</html>
+<!-- ZA SRPSKI -->
+
+<header id="srpskiHeader">
+    <div class="name">
+        <h1>Stanko Risimić</h1>
+        <h4>Junior Full-Stack Developer</h4>
+    </div>
+
+
+    <div id="temaDugme" class="temaDugme">
+        <div class="toggle-circle moon-icon"></div>
+    </div>
+
+    <div id="languageContainer">
+        <button id="languageButton"><i class="fa-solid fa-earth-americas"></i> &#9660;</button>
+        <div id="languageList">
+            <li class="listItem">Srpski</li>
+            <li class="listItem">English</li>
+        </div>
+    </div>
+
+    <nav class="listPc">
+        <a href="./index.html">Početna</a>
+        <a href="./pages/About.html">O meni</a>
+        <a href="./pages/WorkExpirience.html">Radno iskustvo</a>
+        <a href="./pages/Projects.html">Projekti</a>
+        <a href="./pages/Skills.html">Znanja</a>
+        <a href="./pages/Contact.html">Kontakt</a>
+    </nav>
+</header>
+
+<div id="listContainer">
+    <nav id="listMobile">
+        <div id="closeButton"><i class="fa-solid fa-times"></i></div>
+        <a style="margin-top: 7rem;" href="./index.html">Početna</a>
+        <a href="./pages/About.html">O meni</a>
+        <a href="./pages/WorkExpirience.html">Radno iskustvo</a>
+        <a href="./pages/Projects.html">Projekti</a>
+        <a href="./pages/Skills.html">Znanja</a>
+        <a href="./pages/Contact.html">Kontakt</a>
+        <div class="listIcons">
+            <a target="_blank" href="https://www.instagram.com/risimic_s/"><i class="fa-brands fa-instagram"></i></a></i>
+            <a target="_blank" href="https://www.linkedin.com/in/stankorisimic/"><i class="fa-brands fa-linkedin"></i></a>
+            <a target="_blank" href="https://github.com/stankoris"><i class="fa-brands fa-github"></i></a>
+        </div>
+    </nav>
+    <button id="listButton"><i class="fa-solid fa-bars"></i></button>
+</div>
+
+
+
+
+    <!-- /* ****************************************************************************************************************** */
+    SRPSKI HEADER
+    /* ****************************************************************************************************************** */
+     -->
+
+    <header id="srpskiHeader" style="display: none;">
+        <div class="name">
+            <h1>Stanko Risimić</h1>
+            <h4>Junior Full-Stack Developer</h4>
+        </div>
+
+        <div id="theme-toggle" class="theme-toggle">
+            <div class="toggle-circle moon-icon"></div>
+        </div>
+
+        <div id="languageContainer">
+            <button id="languageButton"><i class="fa-solid fa-earth-americas"></i> &#9660;</button>
+            <div id="languageList">
+                <li class="listItem">Srpski</li>
+                <li class="listItem">English</li>
+            </div>
+        </div>
+
+
+        <nav class="listPc">
+            <a href="./index.html">Home</a>
+            <a href="./pages/About.html">About me</a>
+            <a href="./pages/WorkExpirience.html">Work Expirience</a>
+            <a href="./pages/Projects.html">Projects</a>
+            <a href="./pages/Skills.html">Skills</a>
+            <a href="./pages/Contact.html">Contact</a>
+        </nav>
+    </header>
+
+
+
+
+  <!-- /* ****************************************************************************************************************** */
+    SRPSKI HEADER
+    /* ****************************************************************************************************************** */
+     -->
+
+
+
+        <div id="languageContainer">
+            <button id="languageButton"><i class="fa-solid fa-earth-americas"></i> &#9660;</button>
+            <div id="languageList">
+                <li class="listItem">Srpski</li>
+                <li class="listItem">English</li>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+#languageContainer {
+    position: relative;
+    display: inline-block;
+}
+
+#languageButton i {
+    font-size: 24px;
+}
+
+#languageButton {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    color: var(--text-color);
+}
+
+#languageList {
+    display: none; /* Po defaultu sakriven */
+    position: absolute;
+    flex-direction: column;
+    top: 100%; /* Pojavljuje se ispod dugmeta */
+    left: 0;
+    color: var(--text-color);
+    background-color: var(--hover-color); /* Primer boje pozadine, možete promeniti */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 200px;
+}
+
+#languageList li {
+    display: flex;
+    padding: 12px;
+    cursor: pointer;
+    width: 89%;
+    border-radius: 10px;
+}
+
+#languageList li:hover {
+    color: var(--hover-color);
+    background-color: var(--text-color);
+
+}
+
+
+
+/* ****************************************************************************************************************** */
+/* CSS ZA SRPSKI */
+/* ****************************************************************************************************************** */
+
+#srpskiHeader {
+    display: none;
+}
+
+.temaDugme {
+    display: none;
+}
+
+.listaKompjuter {
+    display: none;
+}
+
+#kontejnerListe {
+    display: none;
+}
